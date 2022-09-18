@@ -1,0 +1,386 @@
+@import "bootstrap.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+header {
+  background: #FFFFFF;
+  border-radius: 0;
+  padding: 32px 0;
+}
+header .container {
+  max-width: 1294px;
+}
+header nav ul li {
+  margin-left: 44px;
+}
+header nav ul li:nth-child(2):after {
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-weight: 900;
+  content: "\f078";
+  font-size: 15px;
+  color: black;
+}
+@media (max-width: 992px) {
+  header nav ul li:nth-child(2):after {
+    display: none;
+  }
+}
+header nav ul li a {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media (max-width: 992px) {
+  header nav ul li a {
+    display: none;
+  }
+}
+header ul {
+  list-style: none;
+}
+header ul li:first-of-type {
+  margin-right: 22px;
+}
+
+#container {
+  z-index: 111;
+}
+
+.navT {
+  -webkit-transition: all 0.25s;
+  z-index: 111;
+  cursor: pointer;
+  width: 6%;
+  height: 65px;
+  left: 215px;
+  top: 22px;
+  position: absolute;
+  display: none;
+}
+@media (max-width: 992px) {
+  .navT {
+    display: block;
+  }
+}
+.navT .icon {
+  -webkit-transition: all 0.25s;
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  left: 15px;
+  top: 30px;
+}
+.navT .icon:before, .navT .icon:after {
+  -webkit-transition: all 0.25s;
+  width: 30px;
+  height: 1px;
+  left: 0;
+  background: black;
+  position: absolute;
+  content: "";
+}
+.navT .icon:before {
+  top: -10px;
+}
+.navT .icon:after {
+  top: 10px;
+}
+.navT:hover .icon:before {
+  top: -12px;
+}
+.navT:hover .icon:after {
+  top: 12px;
+}
+.navT.active .icon {
+  -webkit-transform: rotate(180deg);
+  background-color: transparent;
+  left: 10px;
+}
+.navT.active .icon:before, .navT.active .icon:after {
+  top: 0;
+}
+.navT.active .icon:before {
+  -webkit-transform: rotate(45deg);
+}
+.navT.active .icon:after {
+  -webkit-transform: rotate(-45deg);
+}
+
+#menu {
+  z-index: 111;
+  -webkit-transition: all 0.5s;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 65px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid transparent;
+  overflow: hidden;
+}
+#menu ul {
+  list-style: none;
+  padding: 0;
+  letter-spacing: 0.4em;
+}
+#menu li:first-child {
+  margin-top: 0;
+}
+#menu li {
+  -webkit-transition: all 0.2s;
+  margin-top: 20px;
+  padding: 5px 0;
+  color: white;
+}
+#menu a {
+  padding: 8px;
+  -webkit-transition: all 0.25s;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #000000;
+}
+#menu a:hover {
+  letter-spacing: 0.5em;
+  text-decoration: underline;
+}
+#menu.open {
+  height: 213px;
+  width: 100%;
+  background: #DCE5E2;
+  border-bottom: 1px solid black;
+  top: 95px;
+}
+
+.space {
+  letter-spacing: 0;
+}
+
+.main_banner {
+  background: #DCE5E2;
+  border-radius: 32px;
+  max-width: 1294px;
+  margin: auto;
+}
+.main_banner .container {
+  margin-left: 56px;
+}
+@media (max-width: 768px) {
+  .main_banner .container {
+    margin-left: 0;
+  }
+}
+.main_banner .container .row h1 {
+  font-family: "Readex Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 70px;
+  color: #000000;
+  margin-bottom: 19px;
+  margin-top: 145px;
+}
+.main_banner .container .row p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.main_banner .container .row .btn {
+  border: 1px solid #000000;
+  border-radius: 200px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #000000;
+  padding: 14px 53px;
+  margin-bottom: 127px;
+}
+.main_banner .container .row .width {
+  max-width: 776px;
+}
+
+.owl-carousel {
+  position: absolute;
+  max-width: 541px;
+}
+.owl-carousel .banner {
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.owl-carousel .banner.item_1 {
+  background-image: url("../images/main_banner_img.png");
+}
+
+.last_offers .text {
+  max-width: 1151px;
+  margin: auto;
+  margin-top: 75px;
+}
+.last_offers .text h2 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 52px;
+  text-align: center;
+  color: #000000;
+}
+.last_offers .text p {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  max-width: 628px;
+  margin: auto;
+  padding-bottom: 55px;
+}
+.last_offers .container {
+  max-width: 1295px;
+  margin: auto;
+}
+.last_offers .container .laptop {
+  max-width: 639px;
+  height: 480px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+  padding-right: 63px;
+  padding-left: 42px;
+  margin-right: 16px;
+}
+.last_offers .container .laptop h3 {
+  font-family: "Readex Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: right;
+  color: #000000;
+}
+.last_offers .container .laptop h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+}
+.last_offers .phone {
+  max-width: 312px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+  padding-left: 16px;
+  margin-right: 16px;
+}
+.last_offers .phone h3 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+}
+.last_offers .phone h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.last_offers .phone img {
+  padding-top: 144px;
+  padding-bottom: 41px;
+}
+.last_offers .tablet {
+  max-width: 312px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+  padding-top: 114px;
+}
+.last_offers .tablet h3 {
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+}
+.last_offers .tablet h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+.last_offers .tablet img {
+  padding-bottom: 115px;
+}
+.last_offers .watch {
+  max-width: 639px;
+  height: 270px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
+  padding-left: 42px;
+  display: flex;
+}
+.last_offers .watch h3 {
+  font-family: "Readex Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: right;
+  color: #000000;
+  margin: auto;
+}
+.last_offers .watch h4 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: right;
+  color: #000000;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
