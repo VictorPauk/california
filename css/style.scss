@@ -1,9 +1,9 @@
 @import "bootstrap.css";
 
-$main_font:'',sans-serif;
-$white_color:#FFF;
-$main_color:black;
-$second_font:'',sans-serif;
+$main_font: '', sans-serif;
+$white_color: #FFF;
+$main_color: black;
+$second_font: '', sans-serif;
 
 @mixin max-screen($res) {
   @media screen and (max-width: $res) {
@@ -11,68 +11,78 @@ $second_font:'',sans-serif;
   }
 }
 
-*{
+* {
   padding: 0;
-  margin:0;
+  margin: 0;
 }
-.justify-between{
+
+.justify-between {
   justify-content: space-between;
 }
-.align-center{
+
+.align-center {
   align-items: center;
 }
-header{
+
+header {
   background: #FFFFFF;
   border-radius: 0;
   padding: 32px 0;
-  .container{
+
+  .container {
     max-width: 1294px;
   }
-  nav{
-  ul{
-    li{
-      margin-left: 44px;
-        &:nth-child(2){
-          &:after{
-            font-family: "Font Awesome 6 Free",sans-serif;
+
+  nav {
+    ul {
+      li {
+        margin-left: 44px;
+
+        &:nth-child(2) {
+          &:after {
+            font-family: "Font Awesome 6 Free", sans-serif;
             font-weight: 900;
             content: "\f078";
-            font-size:15px;
+            font-size: 15px;
             color: black;
-            @media (max-width: 992px){
+            @media (max-width: 992px) {
               display: none;
             }
           }
-      }
-      a{
-        font-family: 'Inter',sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        text-transform: uppercase;
-        color: #000000;
-        @media (max-width: 992px){
-          display: none;
+        }
+
+        a {
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+          color: #000000;
+          @media (max-width: 992px) {
+            display: none;
+          }
         }
       }
     }
   }
-  }
-  ul{
+
+  ul {
     list-style: none;
-    li{
-      &:first-of-type{
+
+    li {
+      &:first-of-type {
         margin-right: 22px;
       }
     }
   }
 }
-#container{
+
+#container {
   z-index: 111;
 }
 
-.navT{
+.navT {
   -webkit-transition: all 0.25s;
   z-index: 111;
   cursor: pointer;
@@ -82,12 +92,12 @@ header{
   top: 22px;
   position: absolute;
   display: none;
-  @media (max-width: 992px){
+  @media (max-width: 992px) {
     display: block;
   }
 
 
-  .icon{
+  .icon {
     -webkit-transition: all 0.25s;
     position: absolute;
     width: 30px;
@@ -96,7 +106,7 @@ header{
     top: 30px;
 
 
-    &:before, &:after{
+    &:before, &:after {
       -webkit-transition: all 0.25s;
       width: 30px;
       height: 1px;
@@ -105,47 +115,54 @@ header{
       position: absolute;
       content: '';
     }
-    &:before{
+
+    &:before {
       top: -10px;
     }
-    &:after{
+
+    &:after {
       top: 10px;
     }
 
   }
-  &:hover{
+
+  &:hover {
 
 
-    .icon{
-      &:before{
-        top:-12px;
+    .icon {
+      &:before {
+        top: -12px;
       }
-      &:after{
+
+      &:after {
         top: 12px;
       }
     }
   }
-  &.active{
-    .icon{
+
+  &.active {
+    .icon {
       -webkit-transform: rotate(180deg);
       background-color: transparent;
       left: 10px;
 
-      &:before, &:after{
+      &:before, &:after {
         top: 0;
       }
-      &:before{
+
+      &:before {
         -webkit-transform: rotate(45deg);
 
       }
-      &:after{
+
+      &:after {
         -webkit-transform: rotate(-45deg);
       }
     }
   }
 }
 
-#menu{
+#menu {
   z-index: 111;
   -webkit-transition: all 0.5s;
   text-align: center;
@@ -162,25 +179,29 @@ header{
   height: 0;
   border-bottom: 1px solid transparent;
   overflow: hidden;
-  & ul{
+
+  & ul {
     list-style: none;
     padding: 0;
     letter-spacing: 0.4em;
   }
-  & li:first-child{
+
+  & li:first-child {
     margin-top: 0;
   }
-  & li{
+
+  & li {
     -webkit-transition: all 0.2s;
     margin-top: 20px;
     padding: 5px 0;
-    color:white;
+    color: white;
   }
-  & a{
+
+  & a {
     padding: 8px;
     -webkit-transition: all 0.25s;
     cursor: pointer;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -188,55 +209,63 @@ header{
     text-transform: uppercase;
     color: #000000;
   }
-  & a:hover{
+
+  & a:hover {
     letter-spacing: 0.5em;
     text-decoration: underline;
   }
-  &.open{
+
+  &.open {
     height: 213px;
     width: 100%;
     background: #DCE5E2;;
     border-bottom: 1px solid black;
-    top:95px;
+    top: 95px;
   }
 }
-.space{
+
+.space {
   letter-spacing: 0;
 }
+
 .main_banner {
   background: #DCE5E2;
   border-radius: 32px;
   max-width: 1294px;
   margin: auto;
-  .container{
-    margin-left:56px;
-    @media (max-width: 768px){
+
+  .container {
+    margin-left: 56px;
+    @media (max-width: 768px) {
       margin-left: 0;
     }
-    .row{
-      h1{
-        font-family: 'Readex Pro',sans-serif;
+
+    .row {
+      h1 {
+        font-family: 'Readex Pro', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 58px;
         line-height: 70px;
         color: #000000;
-        margin-bottom:19px;
-        margin-top:145px;
+        margin-bottom: 19px;
+        margin-top: 145px;
       }
-      p{
-        font-family: 'Inter',sans-serif;
+
+      p {
+        font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #000000;
-        margin-bottom:30px;
+        margin-bottom: 30px;
       }
-      .btn{
+
+      .btn {
         border: 1px solid #000000;
         border-radius: 200px;
-        font-family: 'Inter',sans-serif;
+        font-family: 'Inter', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -244,31 +273,31 @@ header{
         text-transform: capitalize;
         color: #000000;
         padding: 14px 53px;
-        margin-bottom:127px ;
+        margin-bottom: 127px;
       }
-      .width{
+
+      .width {
         max-width: 776px;
       }
     }
   }
-  }
-  .owl-carousel{
-    position: absolute;
-    max-width: 541px;
-    .banner {
-      background-repeat: no-repeat;
-      height: 100vh;
-      &.item_1 {
-        background-image: url("../images/main_banner_img.png");
-      }
+}
+
+.owl-carousel {
+  max-width: 647px;
+  .banner {
+    img {
+      
     }
   }
-.last_offers{
-  .text{
+}
+.last_offers {
+  .text {
     max-width: 1151px;
     margin: auto;
     margin-top: 75px;
-    h2{
+
+    h2 {
       font-family: 'Readex Pro';
       font-style: normal;
       font-weight: 400;
@@ -277,7 +306,8 @@ header{
       text-align: center;
       color: #000000;
     }
-    p{
+
+    p {
       font-family: 'Readex Pro';
       font-style: normal;
       font-weight: 400;
@@ -290,11 +320,12 @@ header{
       padding-bottom: 55px;
     }
   }
-  .container{
+
+  .container {
     max-width: 1295px;
     margin: auto;
 
-    .laptop{
+    .laptop {
       max-width: 639px;
       height: 480px;
       background: #FFFFFF;
@@ -302,8 +333,9 @@ header{
       padding-right: 63px;
       padding-left: 42px;
       margin-right: 16px;
-      h3{
-        font-family: 'Readex Pro',sans-serif;
+
+      h3 {
+        font-family: 'Readex Pro', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 32px;
@@ -311,7 +343,8 @@ header{
         text-align: right;
         color: #000000;
       }
-      h4{
+
+      h4 {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
@@ -322,13 +355,15 @@ header{
       }
     }
   }
-  .phone{
+
+  .phone {
     max-width: 312px;
     background: #FFFFFF;
     filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
     padding-left: 16px;
     margin-right: 16px;
-    h3{
+
+    h3 {
       font-family: 'Readex Pro';
       font-style: normal;
       font-weight: 400;
@@ -337,7 +372,8 @@ header{
       text-align: center;
       color: #000000;
     }
-    h4{
+
+    h4 {
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -346,17 +382,20 @@ header{
       text-align: center;
       color: #000000;
     }
-    img{
+
+    img {
       padding-top: 144px;
       padding-bottom: 41px;
     }
   }
-  .tablet{
+
+  .tablet {
     max-width: 312px;
     background: #FFFFFF;
     filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
     padding-top: 114px;
-    h3{
+
+    h3 {
       font-family: 'Readex Pro';
       font-style: normal;
       font-weight: 400;
@@ -365,7 +404,8 @@ header{
       text-align: center;
       color: #000000;
     }
-    h4{
+
+    h4 {
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -374,20 +414,24 @@ header{
       text-align: center;
       color: #000000;
     }
-    img{
+
+    img {
       padding-bottom: 115px;
     }
   }
-  .watch{
+
+  .watch {
     max-width: 639px;
     height: 270px;
     background: #FFFFFF;
     filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
     padding-left: 42px;
-
     display: flex;
-    h3{
-      font-family: 'Readex Pro',sans-serif;
+    margin-right: -63px;
+    margin-left: -42px;
+
+    h3 {
+      font-family: 'Readex Pro', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 32px;
@@ -396,8 +440,9 @@ header{
       color: #000000;
       margin: auto;
     }
-    h4{
-      font-family: 'Inter',sans-serif;
+
+    h4 {
+      font-family: 'Inter', sans-serif;
       font-style: normal;
       font-weight: 400;
       font-size: 15px;

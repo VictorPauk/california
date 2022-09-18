@@ -230,17 +230,8 @@ header ul li:first-of-type {
 }
 
 .owl-carousel {
-  position: absolute;
-  max-width: 541px;
+  max-width: 647px;
 }
-.owl-carousel .banner {
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.owl-carousel .banner.item_1 {
-  background-image: url("../images/main_banner_img.png");
-}
-
 .last_offers .text {
   max-width: 1151px;
   margin: auto;
@@ -361,6 +352,8 @@ header ul li:first-of-type {
   filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
   padding-left: 42px;
   display: flex;
+  margin-right: -63px;
+  margin-left: -42px;
 }
 .last_offers .watch h3 {
   font-family: "Readex Pro", sans-serif;
