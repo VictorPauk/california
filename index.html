@@ -5,15 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>California</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Readex+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://resources/demos/style.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
 </head>
 <body>
+
+<div id="dialog" title="Basic dialog" class="dialog" >
+    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+</div>
 
 <header>
     <div class="container d-flex justify-between align-center">
@@ -44,13 +48,13 @@
         </nav>
         <ul class="d-flex align-center">
             <li>
-                <a href="#">
+                <a href="#looking">
                     <img src="images/search.svg" alt="find">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="images/shop.svg" alt="shop">
+                    <img src="images/shop.svg" alt="shop" id="opener">
                 </a>
             </li>
         </ul>
@@ -65,32 +69,42 @@
     </div>
 </header>
 <section class="main_banner">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 ">
-                <div class="width">
-                    <h1>
-                        The new phones are here take a look.
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam,
-                        tempor.
-                        Faucibus morbi turpis.
-                    </p>
-                    <a href="#" class="btn">Explore</a>
+    <div class="container main_con">
+        <div class="owl-carousel">
+            <div class="main_item item_1 row m-auto ">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-lg-center  content_box">
+                    <h2>The new phones are here take a look.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor.
+                        Faucibus morbi turpis.</p>
+                    <a class="btn  align-self-center align-self-lg-start">Explore
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-end justify-content-center img">
+                    <img src="images/main_banner_img.png" alt="main_image">
                 </div>
             </div>
-            <div class="col-md-6 ">
-                <div class="owl-carousel owl-theme">
-                    <div class="banner">
-                        <img src="images/IMAGE.svg">
-                    </div>
-                    <div class="banner ">
-                        <img src="images/IMAGE.svg">
-                    </div>
-                    <div class="banner ">
-                        <img src="images/IMAGE.svg">
-                    </div>
+            <div class="main_item item_2 row m-auto">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-lg-center content_box">
+                    <h2>The new phones are here take a look.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor.
+                        Faucibus morbi turpis.</p>
+                    <a class="btn  align-self-center align-self-lg-start">Explore
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-end justify-content-center img">
+                    <img src="images/main_banner_img.png" alt="main_image">
+                </div>
+            </div>
+            <div class=" main_item item_3 row m-auto">
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-lg-center content_box">
+                    <h2>The new phones are here take a look.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor.
+                        Faucibus morbi turpis.</p>
+                    <a class="btn  align-self-center align-self-lg-start">Explore
+                    </a>
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-end justify-content-center img">
+                    <img src="images/main_banner_img.png" alt="main_image">
                 </div>
             </div>
         </div>
@@ -98,47 +112,61 @@
 </section>
 
 <section class="last_offers">
+    <div class="container">
     <div class="text">
-        <h2>
+        <h1>
             Shop our latest offers and categories
-        </h2>
+        </h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque in est dui, aliquam, tempor. Faucibus
             morbi turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
     </div>
-    <div class="container">
-        <div class="flex ">
-            <div class="laptop hover">
+        <div class="row ">
+            <div class="col-12 col-lg-6 pr-3 pr-lg-2 mb-2 mb-lg-0">
+            <div class=" shop_offers laptop hover">
+                <a href="#">
                 <img src="images/laptop.png" alt="img">
+                </a>
                 <h4>Laptops</h4>
                 <h3>
                     True Laptop <br> Solution
                 </h3>
-                <div class="watch hover">
+            </div>
+                <div class=" shop_offers watch hover d-flex align-items-center justify-content-between">
+                    <a href="#">
                     <img src="images/watch.png" alt="img">
-                    <h4>Watch</h4>
-                    <h3>
+                    </a>
+                    <div href="#" class="d-flex flex-column text-right">
+                    <h4 class="text-center">Watch</h4>
+                    <h3 class="text-center">
                         Not just <br> stylisht
                     </h3>
+                        </div>
                 </div>
             </div>
-            <div class="flex">
-                <div class="phone hover">
+            <div class="col-6 col-lg-3 pl-lg-2 pr-1 pr-lg-2">
+                <div class=" shop_offers phone hover h-100 d-flex flex-column justify-content-center pl-2">
+                    <a href="#">
                     <img src="images/phone.png" alt="img">
-                    <h4>Phones</h4>
-                    <h3>Your day to day <br> life</h3>
+                    </a>
+                    <h4 class="text-center">Phones</h4>
+                    <h3 class="text-center">Your day to day <br> life</h3>
                 </div>
-                <div class="tablet hover">
-                    <h4>Tablet</h4>
-                    <h3>Empower your <br> work</h3>
+            </div>
+            <div class="col-6 col-lg-3 pr-3 pl-1 pl-lg-2 ">
+                <div class="shop_offers tablet hover h-100 d-flex flex-column justify-content-center pt-3 pb-3">
+                    <h4 class="text-center">Tablet</h4>
+                    <h3 class="text-center">Empower your <br> work</h3>
+                    <a href="#">
                     <img src="images/tablet.png" alt="img">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="selled_items">
+<section class="selled_items scrollflow -opacity -slide-top">
     <div class="text">
         <h3>
             Save on our most selled items.
@@ -150,11 +178,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6 col-12 width">
-                <img src="images/macbook_13.png" alt="">
+                <img src="images/macbook_13.png" alt="img">
                 <h4>
                     MacBook Pro 13
                 </h4>
-                <p>
+                <p class="margin">
                     Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
                 </p>
                 <h5>
@@ -162,7 +190,7 @@
                 </h5>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-12 width">
-                <img src="images/smart_galaxy.png" alt="">
+                <img src="images/smart_galaxy.png" alt="img">
                 <h4>
                     Smart Galaxy Watch 3
                 </h4>
@@ -174,7 +202,7 @@
                 </h5>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-12 width macbook_air">
-                <img src="images/macbook_air.png" alt="">
+                <img src="images/macbook_air.png" alt="img">
                 <h4>
                     MacBook Air M1
                 </h4>
@@ -219,7 +247,7 @@
                     Latest and gratest
                 </h5>
                 <a href="#" class="btn">Explore</a>
-                <img src="images/watch_2.png" alt="">
+                <img src="images/watch_2.png" alt="img" class="img_1">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 width">
                 <p>
@@ -229,7 +257,7 @@
                     Best selling
                 </h5>
                 <a href="#" class="btn">Explore</a>
-                <img src="images/phones.png" alt="">
+                <img src="images/phones.png" alt="img" class="img_2">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 width">
                 <p>
@@ -239,7 +267,7 @@
                     Every product
                 </h5>
                 <a href="#" class="btn">Explore</a>
-                <img src="images/macbook.png" alt="">
+                <img src="images/macbook.png" alt="img" class="img_3">
             </div>
         </div>
     </div>
@@ -279,7 +307,7 @@
         </div>
     </div>
 </section>
-<section class="looking">
+<section class="looking" id="looking">
     <div class="container">
         <h4>
             Looking for anything else?
@@ -320,86 +348,86 @@
 </section>
 <footer>
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-12 col-lg-4  text-lg-left  align-items-lg-start logo_sub">
-            <a href="#" class="logo">
-                <img src="images/logo.svg" alt="logo">
-            </a>
-            <p >
-                Sign up for texts to be notified about our best offers on the perfect gifts.
-            </p>
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                </a>
+                <p>
+                    Sign up for texts to be notified about our best offers on the perfect gifts.
+                </p>
             </div>
-        <div class="col-6 col-md-3 col-lg-2 ">
-            <ul>
-                <li>
-                    <a href="#">All products</a>
-                </li>
-                <li>
-                    <a href="#">Phones</a>
-                </li>
-                <li>
-                    <a href="#">Watch</a>
-                </li>
-                <li>
-                    <a href="#">Tablet</a>
-                </li>
-                <li>
-                    <a href="#">Laptops</a>
-                </li>
-            </ul>
+            <div class="col-6 col-md-3 col-lg-2 ">
+                <ul>
+                    <li>
+                        <a href="#">All products</a>
+                    </li>
+                    <li>
+                        <a href="#">Phones</a>
+                    </li>
+                    <li>
+                        <a href="#">Watch</a>
+                    </li>
+                    <li>
+                        <a href="#">Tablet</a>
+                    </li>
+                    <li>
+                        <a href="#">Laptops</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 ">
+                <ul>
+                    <li>
+                        <a href="#">Company</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 ">
+                <ul>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Style Guide</a>
+                    </li>
+                    <li>
+                        <a href="#">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#">Change Log</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 ">
+                <ul>
+                    <li>
+                        <a href="#">Follow Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="#">Youtube</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-2 ">
-            <ul>
-                <li>
-                    <a href="#">Company</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Support</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2 ">
-            <ul>
-                <li>
-                    <a href="#">Support</a>
-                </li>
-                <li>
-                    <a href="#">Style Guide</a>
-                </li>
-                <li>
-                    <a href="#">Licensing</a>
-                </li>
-                <li>
-                    <a href="#">Change Log</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-6 col-md-3 col-lg-2 ">
-            <ul>
-                <li>
-                    <a href="#">Follow Us</a>
-                </li>
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-                <li>
-                    <a href="#">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="#">Youtube</a>
-                </li>
-            </ul>
-        </div>
-    </div>
         <hr class="line">
         <div class="d-flex justify-between">
             <a href="#" class="made_by">
@@ -415,8 +443,10 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/owl.carousel.js"></script>
+<script src="js/scrollflow.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -27,3 +27,30 @@ $(".navT").on("click", function(){
 
 
 })
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+
+
+$( function() {
+    $( "#dialog" ).dialog({
+        autoOpen: false,
+        show: {
+            effect: "blind",
+            duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 1000
+        }
+    });
+
+    $( "#opener" ).on( "click", function() {
+        $( "#dialog" ).dialog( "open" );
+    });
+} );
+

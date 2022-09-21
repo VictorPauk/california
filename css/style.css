@@ -1,4 +1,6 @@
 @import "bootstrap.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
 * {
   padding: 0;
   margin: 0;
@@ -21,17 +23,36 @@ a:hover {
 }
 
 header {
-  background: #FFFFFF;
+  background: white;
   border-radius: 0;
   padding: 32px 0;
 }
 header .container {
   max-width: 1294px;
 }
-header nav ul li {
+header .container img:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+@media (max-width: 460px) {
+  header .container img:first-of-type {
+    max-width: 130px;
+  }
+}
+@media (max-width: 320px) {
+  header .container img:first-of-type:last-of-type {
+    margin-right: -9px;
+  }
+}
+@media (max-width: 460px) {
+  header .container nav {
+    max-width: 70px;
+  }
+}
+header .container nav ul li {
   margin-left: 44px;
 }
-header nav ul li:nth-child(2):after {
+header .container nav ul li:nth-child(2):after {
   font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   content: "\f078";
@@ -39,11 +60,11 @@ header nav ul li:nth-child(2):after {
   color: black;
 }
 @media (max-width: 992px) {
-  header nav ul li:nth-child(2):after {
+  header .container nav ul li:nth-child(2):after {
     display: none;
   }
 }
-header nav ul li a {
+header .container nav ul li a {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -52,20 +73,20 @@ header nav ul li a {
   text-transform: uppercase;
   color: #000000;
 }
-header nav ul li a:hover {
+header .container nav ul li a:hover {
   transition: 0.3s;
   border-radius: 16px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 992px) {
-  header nav ul li a {
+  header .container nav ul li a {
     display: none;
   }
 }
-header ul {
+header .container ul {
   list-style: none;
 }
-header ul li:first-of-type {
+header .container ul li:first-of-type {
   margin-right: 22px;
 }
 
@@ -87,6 +108,11 @@ header ul li:first-of-type {
 @media (max-width: 992px) {
   .navT {
     display: block;
+  }
+}
+@media (max-width: 460px) {
+  .navT {
+    margin-left: -60px;
   }
 }
 .navT .icon {
@@ -193,20 +219,29 @@ header ul li:first-of-type {
 }
 
 .main_banner {
-  background: #DCE5E2;
-  border-radius: 32px;
+  padding: 28px 0;
+}
+.main_banner .main_con {
   max-width: 1294px;
-  margin: auto;
 }
-.main_banner .container {
-  margin-left: 56px;
+.main_banner .main_con .main_item {
+  min-height: 550px;
+  border-radius: 32px;
 }
-@media (max-width: 768px) {
-  .main_banner .container {
-    margin-left: 0;
+.main_banner .main_con .main_item .content_box {
+  padding: 18px 3px 0 56px;
+}
+@media (max-width: 992px) {
+  .main_banner .main_con .main_item .content_box {
+    padding: 29px 73px 0 44px;
   }
 }
-.main_banner .container .row h1 {
+@media (max-width: 376px) {
+  .main_banner .main_con .main_item .content_box {
+    padding: 25px 67px 0 38px;
+  }
+}
+.main_banner .main_con .main_item .content_box h2 {
   font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -214,20 +249,42 @@ header ul li:first-of-type {
   line-height: 70px;
   color: #000000;
   margin-bottom: 19px;
-  margin-top: 145px;
 }
-.main_banner .container .row p {
+@media (max-width: 320px) {
+  .main_banner .main_con .main_item .content_box h2 {
+    font-size: 43px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 533px) {
+  .main_banner .main_con .main_item .content_box h2 {
+    font-size: 53px;
+    line-height: 63px;
+  }
+}
+.main_banner .main_con .main_item .content_box p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  margin-right: 26px;
   margin-bottom: 30px;
 }
-.main_banner .container .row .btn {
+@media (max-width: 1024px) {
+  .main_banner .main_con .main_item .content_box p {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+  }
+}
+.main_banner .main_con .main_item .content_box .btn {
   border: 1px solid #000000;
   border-radius: 200px;
+  max-width: 170px;
+  width: 100%;
+  height: 50px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -235,35 +292,112 @@ header ul li:first-of-type {
   line-height: 22px;
   text-transform: capitalize;
   color: #000000;
-  padding: 14px 53px;
-  margin-bottom: 127px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.main_banner .container .row .width {
-  max-width: 776px;
+.main_banner .main_con .main_item .content_box .btn:hover {
+  background: white;
+  transition: 0.3s;
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
 }
-.main_banner .container .owl-carousel {
-  max-width: 647px;
+.main_banner .main_con .main_item .img img {
+  width: 100%;
 }
-.main_banner .container .owl-carousel .owl-stage-outer {
-  bottom: -26px;
+.main_banner .main_con .item_1 {
+  background-color: #DCE5E2;
 }
-.main_banner .container .owl-carousel .banner img {
-  max-width: 647px;
-  height: 550px;
+.main_banner .main_con .item_2 {
+  background-color: #DCE5E2;
+}
+.main_banner .main_con .item_3 {
+  background-color: #DCE5E2;
 }
 
-@media (max-width: 1090px) {
-  .last_offers {
-    position: relative;
+.owl-nav .owl-prev {
+  position: absolute;
+  left: 23px;
+  top: calc(50% - 10px);
+}
+@media (max-width: 756px) {
+  .owl-nav .owl-prev {
+    left: 15px;
   }
 }
-.last_offers .text {
+@media (max-width: 320px) {
+  .owl-nav .owl-prev {
+    left: 10px;
+  }
+}
+.owl-nav .owl-prev:before {
+  content: "\f053";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free", sans-serif;
+  display: block;
+  width: 14px;
+  height: 26px;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  right: 23px;
+  top: calc(50% - 10px);
+}
+@media (max-width: 756px) {
+  .owl-nav .owl-next {
+    right: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .owl-nav .owl-next {
+    right: 10px;
+  }
+}
+.owl-nav .owl-next:before {
+  content: "\f054";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free", sans-serif;
+  display: block;
+  width: 14px;
+  height: 26px;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 23px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.owl-dots span {
+  display: inline-block;
+  max-width: 194px;
+  width: 100%;
+  height: 2px;
+  opacity: 0.5;
+  background: #000000;
+}
+
+.owl-carousel button.owl-dot {
+  width: 194px;
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+.owl-dots button.owl-dot.active span {
+  opacity: 1;
+}
+
+.last_offers .container {
+  max-width: 1295px;
+  margin: auto;
+}
+.last_offers .container .text {
   max-width: 1151px;
   margin: auto;
   margin-top: 75px;
 }
-.last_offers .text h2 {
-  font-family: "Readex Pro";
+.last_offers .container .text h1 {
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -272,12 +406,12 @@ header ul li:first-of-type {
   color: #000000;
 }
 @media (max-width: 590px) {
-  .last_offers .text h2 {
+  .last_offers .container .text h1 {
     font-size: 35px;
   }
 }
-.last_offers .text p {
-  font-family: "Readex Pro";
+.last_offers .container .text p {
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -288,48 +422,14 @@ header ul li:first-of-type {
   margin: auto;
   padding-bottom: 55px;
 }
-.last_offers .container {
-  max-width: 1295px;
-  margin: auto;
-}
-.last_offers .container .flex {
-  flex-wrap: wrap;
-  display: flex;
-}
-@media (max-width: 1290px) {
-  .last_offers .container .flex {
-    margin-left: 115px;
-  }
-}
-.last_offers .container .laptop {
-  max-width: 639px;
-  border-radius: 32px;
-  height: 480px;
-  background: #FFFFFF;
+.last_offers .container .shop_offers {
   filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
-  padding-right: 63px;
-  padding-left: 42px;
-  margin-right: 16px;
 }
-@media (max-width: 390px) {
-  .last_offers .container .laptop {
-    margin-left: -73px;
-    padding-right: 9px;
-  }
+.last_offers .container .shop_offers img {
+  width: 100%;
+  height: 100%;
 }
-@media (max-width: 1090px) {
-  .last_offers .container .laptop img {
-    max-width: 247px;
-    height: 167px;
-    margin-bottom: -37px;
-  }
-}
-@media (max-width: 390px) {
-  .last_offers .container .laptop img {
-    max-width: 155px;
-  }
-}
-.last_offers .container .laptop h3 {
+.last_offers .container .shop_offers h3 {
   font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -338,217 +438,19 @@ header ul li:first-of-type {
   text-align: right;
   color: #000000;
 }
-@media (max-width: 1090px) {
-  .last_offers .container .laptop h3 {
-    font-size: 25px;
-    line-height: 27px;
-  }
-}
-.last_offers .container .laptop h4 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19px;
-  text-align: right;
-  color: #000000;
-}
-.last_offers .phone {
-  max-width: 312px;
-  background: #FFFFFF;
-  border-radius: 32px;
-  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
-  padding-left: 16px;
-  margin-right: 16px;
-}
-@media (max-width: 1090px) {
-  .last_offers .phone {
-    position: absolute;
-  }
-}
 @media (max-width: 768px) {
-  .last_offers .phone {
-    margin-left: 70px;
-    padding-top: 15px;
+  .last_offers .container .shop_offers h3 {
+    font-size: 27px;
+    line-height: 33px;
   }
 }
-@media (max-width: 590px) {
-  .last_offers .phone {
-    margin-left: -19px;
+@media (max-width: 428px) {
+  .last_offers .container .shop_offers h3 {
+    font-size: 23px;
+    line-height: 23px;
   }
 }
-@media (max-width: 480px) {
-  .last_offers .phone {
-    margin-left: -100px;
-  }
-}
-@media (max-width: 390px) {
-  .last_offers .phone {
-    margin-left: -167px;
-    padding-left: 0;
-  }
-}
-@media (max-width: 320px) {
-  .last_offers .phone {
-    margin-left: -200px;
-  }
-}
-.last_offers .phone img {
-  padding-top: 144px;
-  padding-bottom: 41px;
-}
-@media (max-width: 768px) {
-  .last_offers .phone img {
-    padding-top: 15px;
-  }
-}
-.last_offers .phone h3 {
-  font-family: "Readex Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-  color: #000000;
-}
-@media (max-width: 768px) {
-  .last_offers .phone h3 {
-    font-size: 25px;
-  }
-}
-.last_offers .phone h4 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 19px;
-  text-align: center;
-  color: #000000;
-}
-.last_offers .tablet {
-  max-width: 312px;
-  background: #FFFFFF;
-  border-radius: 32px;
-  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
-  padding-top: 114px;
-}
-@media (max-width: 1090px) {
-  .last_offers .tablet {
-    position: absolute;
-  }
-}
-@media (max-width: 768px) {
-  .last_offers .tablet {
-    margin-top: 14px;
-    margin-left: 88px;
-    padding-top: 40px;
-  }
-}
-@media (max-width: 590px) {
-  .last_offers .tablet {
-    margin-left: 0;
-  }
-}
-@media (max-width: 480px) {
-  .last_offers .tablet {
-    margin-left: -80px;
-  }
-}
-@media (max-width: 390px) {
-  .last_offers .tablet {
-    margin-left: -159px;
-  }
-}
-@media (max-width: 320px) {
-  .last_offers .tablet {
-    margin-left: -190px;
-  }
-}
-.last_offers .tablet img {
-  padding-bottom: 115px;
-}
-@media (max-width: 1090px) {
-  .last_offers .tablet img {
-    max-width: 223px;
-    padding-bottom: 13px;
-  }
-}
-@media (max-width: 768px) {
-  .last_offers .tablet img {
-    padding-top: 15px;
-  }
-}
-@media (max-width: 590px) {
-  .last_offers .tablet img {
-    padding-top: 0;
-  }
-}
-.last_offers .tablet h3 {
-  font-family: "Readex Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-  color: #000000;
-}
-@media (max-width: 768px) {
-  .last_offers .tablet h3 {
-    font-size: 25px;
-  }
-}
-.last_offers .tablet h4 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #000000;
-}
-.last_offers .watch {
-  max-width: 639px;
-  height: 270px;
-  background: #FFFFFF;
-  border-radius: 32px;
-  filter: drop-shadow(0px 4px 35px rgba(0, 0, 0, 0.25));
-  padding-left: 42px;
-  display: flex;
-  margin-right: -63px;
-  margin-left: -42px;
-}
-@media (max-width: 1090px) {
-  .last_offers .watch {
-    height: 169px;
-    margin-top: 25px;
-  }
-}
-@media (max-width: 480px) {
-  .last_offers .watch {
-    margin-left: -93px;
-  }
-}
-@media (max-width: 320px) {
-  .last_offers .watch {
-    margin-left: -130px;
-  }
-}
-@media (max-width: 1090px) {
-  .last_offers .watch img {
-    max-width: 50px;
-  }
-}
-.last_offers .watch h3 {
-  font-family: "Readex Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: right;
-  color: #000000;
-  margin: auto;
-}
-.last_offers .watch h4 {
+.last_offers .container .shop_offers h4 {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -556,13 +458,40 @@ header ul li:first-of-type {
   line-height: 19px;
   text-align: right;
   color: #000000;
-  margin: auto;
+}
+.last_offers .container .laptop {
+  padding-left: 42px;
+  margin-bottom: 72px;
+  background: white;
+  border-radius: 32px;
+  padding-right: 27px;
+}
+@media (max-width: 428px) {
+  .last_offers .container .laptop {
+    padding-right: 27px;
+    margin-bottom: 10px;
+  }
+}
+.last_offers .container .phone {
+  margin-left: 31px;
+  background: white;
+  border-radius: 32px;
+}
+.last_offers .container .tablet {
+  margin-left: 31px;
+  background: white;
+  border-radius: 32px;
+}
+.last_offers .container .watch {
+  padding-left: 42px;
+  background: white;
+  border-radius: 32px;
 }
 
 .hover {
   position: relative;
   transition: 0.3s;
-  bottom: 0px;
+  bottom: 0;
 }
 .hover:hover {
   bottom: -30px;
@@ -574,7 +503,7 @@ header ul li:first-of-type {
   margin-top: 78px;
 }
 .selled_items .text h3 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -582,8 +511,13 @@ header ul li:first-of-type {
   text-align: center;
   color: #000000;
 }
+@media (max-width: 375px) {
+  .selled_items .text h3 {
+    font-size: 39px;
+  }
+}
 .selled_items .text p {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -591,6 +525,12 @@ header ul li:first-of-type {
   color: #000000;
   text-align: center;
   margin-bottom: 59px;
+}
+@media (max-width: 375px) {
+  .selled_items .text p {
+    max-width: 323px;
+    margin: auto;
+  }
 }
 @media (max-width: 320px) {
   .selled_items .text p {
@@ -601,15 +541,18 @@ header ul li:first-of-type {
   max-width: 1294px;
 }
 .selled_items .container h4 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
   color: #000000;
 }
+.selled_items .container .margin {
+  margin-bottom: 43px;
+}
 .selled_items .container p {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -618,12 +561,17 @@ header ul li:first-of-type {
   margin-bottom: 25px;
 }
 .selled_items .container h5 {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+@media (max-width: 575px) {
+  .selled_items .container h5 {
+    margin-bottom: 35px;
+  }
 }
 .selled_items .container img {
   margin-bottom: 37px;
@@ -637,6 +585,12 @@ header ul li:first-of-type {
     margin: auto;
   }
 }
+.selled_items .container .col-lg-3:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  cursor: pointer;
+}
 
 .the_best .text {
   max-width: 1294px;
@@ -644,7 +598,7 @@ header ul li:first-of-type {
   margin-top: 56px;
 }
 .the_best .text h4 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -653,13 +607,20 @@ header ul li:first-of-type {
   color: #000000;
 }
 .the_best .text p {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
   color: #000000;
   text-align: center;
+  margin-bottom: 56px;
+}
+@media (max-width: 375px) {
+  .the_best .text p {
+    max-width: 323px;
+    margin: auto;
+  }
 }
 .the_best .container {
   max-width: 1294px;
@@ -683,7 +644,7 @@ header ul li:first-of-type {
   }
 }
 .the_best .container p {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -693,7 +654,7 @@ header ul li:first-of-type {
   margin-top: 41px;
 }
 .the_best .container h5 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -705,7 +666,7 @@ header ul li:first-of-type {
 .the_best .container .btn {
   border: 1px solid #000000;
   border-radius: 200px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -721,13 +682,23 @@ header ul li:first-of-type {
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   background: #DCE5E2;
 }
+.the_best .container img {
+  width: 100%;
+}
+.the_best .container .img_2 {
+  margin-bottom: 27px;
+}
+.the_best .container .img_3 {
+  margin-bottom: 63px;
+}
+
 .ideas .text {
   max-width: 1294px;
   margin: auto;
   margin-top: 56px;
 }
 .ideas .text h4 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -736,15 +707,22 @@ header ul li:first-of-type {
   color: #000000;
 }
 .ideas .text p {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
   text-align: center;
   color: #000000;
+  margin-bottom: 56px;
 }
-@media (min-width: 768px) {
+@media (max-width: 375px) {
+  .ideas .text p {
+    max-width: 323px;
+    margin: auto;
+  }
+}
+@media (max-width: 992px) {
   .ideas .container .row .col-md-8 {
     margin: auto;
   }
@@ -755,7 +733,7 @@ header ul li:first-of-type {
   }
 }
 .ideas .container .row p {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -763,32 +741,37 @@ header ul li:first-of-type {
   color: #000000;
 }
 .ideas .container .row a {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
   text-transform: capitalize;
   color: #000000;
+  margin-top: 73px;
 }
 .ideas .container .row a:after {
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f08e";
 }
 
+.looking {
+  scroll-behavior: smooth;
+}
 .looking .container {
   max-width: 935px;
   padding-top: 75px;
 }
 .looking .container h4 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
   line-height: 52px;
   text-align: center;
   color: #000000;
+  margin-bottom: 24px;
 }
 .looking .container .search_form {
   position: relative;
@@ -806,7 +789,7 @@ header ul li:first-of-type {
   margin-bottom: 18px;
 }
 .looking .container .search_form input::placeholder {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -824,7 +807,7 @@ header ul li:first-of-type {
 }
 .looking .container .search_form .btn:before {
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f002";
   width: 100%;
 }
@@ -837,13 +820,13 @@ header ul li:first-of-type {
   margin: auto;
 }
 .looking .container .find a {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  background: #FFFFFF;
+  background: white;
   border: 1px solid #C5C5C5;
   border-radius: 200px;
   padding: 12px 22px 13px;
@@ -860,15 +843,22 @@ header ul li:first-of-type {
 .thing {
   padding-top: 67px;
 }
+@media (max-width: 920px) {
+  .thing {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 .thing .container {
   max-width: 935px;
   padding-top: 47px;
   background: #DCE5E2;
   border-radius: 16px;
   padding-bottom: 43px;
+  margin-bottom: 19px;
 }
 .thing .container h4 {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -877,7 +867,7 @@ header ul li:first-of-type {
   color: #000000;
 }
 .thing .container p {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -904,7 +894,7 @@ header ul li:first-of-type {
   border-radius: 54px 0 0 54px;
 }
 .thing .container form input::placeholder {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -919,13 +909,17 @@ header ul li:first-of-type {
   height: 50px;
   background: #000000;
   border-radius: 0 200px 200px 0;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
+}
+.thing .container form button:hover {
+  background: white;
+  color: #000000;
 }
 
 footer {
@@ -941,6 +935,7 @@ footer .container {
 footer .container .row {
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 footer .container .row .logo_sub {
   text-align: center;
@@ -953,13 +948,12 @@ footer .container .row .logo img {
 }
 footer .container .row p {
   max-width: 304px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-  margin-right: 118px;
 }
 footer .container .row ul {
   list-style: none;
@@ -968,72 +962,115 @@ footer .container .row ul li {
   margin-bottom: 14px;
 }
 footer .container .row ul li:first-child a {
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-size: 22px;
   line-height: 28px;
   margin-bottom: 19px;
   margin-right: 93px;
 }
-footer .container .row ul li:nth-child(2) a {
-  margin-right: 121px;
+@media (max-width: 460px) {
+  footer .container .row ul li:first-child a {
+    margin-right: 0;
+  }
 }
 footer .container .row ul li:nth-child(2) a {
+  margin-right: 114px;
+}
+@media (max-width: 460px) {
+  footer .container .row ul li:nth-child(2) a {
+    margin-right: 0;
+  }
+}
+footer .container .row ul li:nth-child(3) a {
   margin-right: 134px;
 }
+@media (max-width: 460px) {
+  footer .container .row ul li:nth-child(3) a {
+    margin-right: 0;
+  }
+}
 footer .container .row ul li a {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 22px;
   color: #000000;
 }
+footer .container .row ul li a:hover {
+  color: #212529;
+  text-decoration: none;
+}
 footer .made_by {
   display: flex;
   justify-content: space-between;
   margin-top: 52px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+@media (max-width: 1090px) {
+  footer .made_by {
+    font-size: 10px;
+    line-height: 13px;
+  }
 }
 footer .made_by:before {
   content: "Made By:";
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
 }
+@media (max-width: 1090px) {
+  footer .made_by:before {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
 footer .made_by:after {
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f08e";
 }
 footer .powered_by {
   margin-top: 52px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+@media (max-width: 1090px) {
+  footer .powered_by {
+    font-size: 10px;
+    line-height: 13px;
+  }
 }
 footer .powered_by:before {
   content: "Powered by:";
-  font-family: "Readex Pro";
+  font-family: "Readex Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
 }
+@media (max-width: 1090px) {
+  footer .powered_by:before {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
 footer .powered_by:after {
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f08e";
 }
 
